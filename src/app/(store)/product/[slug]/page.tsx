@@ -1,5 +1,5 @@
 import { api } from '@/app/data/api'
-import { Product } from '@/app/data/types/protuct'
+import { Product } from '@/app/data/types/product'
 import { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -29,6 +29,18 @@ export async function generateMetadata({
   return {
     title: product.title,
   }
+}
+
+export async function generateStaticParams() {
+  const response = await api('/products/featured')
+
+  const products: Product[] = await response.json()
+
+  // return [{ slug: 'moleton-never-stop-learning' }]
+
+  return products.map((product) => {
+    return { slug: product.slug }
+  })
 }
 
 export default async function ProductPage({ params }: ProductProps) {
