@@ -33,7 +33,9 @@ O DevStore é um e-commerce desenvolvido utilizando as tecnologias Next.js e Tai
 
 ## Demonstração
 
-Insira um gif ou um link de alguma demonstração
+
+https://github.com/darioreisjr/projeto-de-e-commerce-devstore/assets/85812823/3bb568e4-c41d-434c-912d-3858edc87bce
+
 
 
 ## Funcionalidades
