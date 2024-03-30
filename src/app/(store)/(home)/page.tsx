@@ -5,7 +5,6 @@ import { Product } from '@/app/data/types/product'
 import { Metadata } from 'next'
 
 async function getFeaturedProducts(): Promise<Product[]> {
-  await new Promise((resolve) => setTimeout(resolve, 1000))
   const response = await api('/products/featured', {
     next: {
       revalidate: 60 * 60, // 1 hour
@@ -62,8 +61,8 @@ export default async function Home() {
             <Image
               src={product.image}
               className="group-hover:scale-105 transition-transform duration-500"
-              width={920}
-              height={920}
+              width={450}
+              height={450}
               quality={100}
               alt=""
             />
